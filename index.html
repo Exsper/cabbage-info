@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<noscript>Your browser does not support JavaScript!</noscript>
+
+<head>
+    <title>没有小白菜查我要死了</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <span>uid: </span><input id="uid" placeholder="输入osu数字id" />
+    <span>模式: </span><select id="mode">
+        <option value="0" selected>Standard</option>
+        <option value="1">Taiko</option>
+        <option value="2">Catch The Beat</option>
+        <option value="3">Mania</option>
+    </select>
+    <button onclick="setImg()">摸摸小白菜</button>
+
+    <br>
+    <br>
+    
+    <img id="infoImg">
+
+    <script type="text/javascript">
+        function setImg() {
+            let uid = document.getElementById("uid").value;
+            let mode = document.getElementById("mode").value;
+            document.getElementById("infoImg").src = "https://www.mothership.top/api/v1/stat/" + uid + "?mode=" + mode;
+        } 
+    </script>
+
+</body>
+
+</html>
